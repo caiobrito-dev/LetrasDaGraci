@@ -69,7 +69,7 @@ const galleryItems = [
     title: 'Mural Sala',
     category: 'Mural',
     span: '',
-    bg: "url('/imgs/parede003.jpg') center/cover no-repeat",
+    bg: "url('/imgs/muralSala.jpeg') center/cover no-repeat",
     size: 'small',
   },
   {
