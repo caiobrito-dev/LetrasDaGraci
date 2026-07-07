@@ -1,0 +1,75 @@
+1. Hero Section (primeira dobra)
+
+Objetivo: gerar encantamento.
+
+Exemplo:
+
+Headline:
+Transforme seu casamento em uma obra de arte eterna
+Subheadline:
+Pintura ao vivo para casamentos e eventos especiais
+CTA:
+Solicitar orçamento
+Imagem/vídeo dela pintando ao vivo
+
+2. Sobre a artista
+
+Conteúdo:
+
+Foto dela
+Mini bio
+História / propósito
+
+
+3. Serviços
+
+Cards separados:
+
+Pintura ao vivo dos noivos
+Aquarelas para convidados
+Pintura personalizada por foto
+Papelaria/ilustração personalizada
+
+Cada card com:
+
+foto
+descrição curta
+CTA
+
+
+4. Portfólio / Galeria
+
+Muito forte nesse nicho.
+
+Separar por:
+
+Casamentos
+Aquarelas
+Convidados
+Obras finalizadas
+
+Ideal: masonry grid ou carousel.
+
+5. Depoimentos
+
+Pode colocar:
+
+texto
+foto do casal
+print de WhatsApp/Instagram
+
+6. FAQ
+
+Perguntas obrigatórias:
+
+A pintura fica pronta no mesmo dia?
+Atende outras cidades?
+Quanto tempo dura?
+Quantos meses antes reservar?
+Faz pintura após o casamento?
+Quais tamanhos de tela?
+
+8. CTA final 
+
+Botão:
+Fale com a artista (que leva pro WhatsApp dela num: 53 84443200) 
