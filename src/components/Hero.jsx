@@ -43,7 +43,7 @@ export default function Hero() {
         {/* Sage blob bottom-left */}
         <div className="absolute -bottom-16 -left-16 w-[400px] h-[400px] rounded-full bg-[#e1e6b8]/40 blur-[100px]" />
         {/* Thin horizontal rule */}
-        <div className="absolute left-16 lg:left-32 top-1/2 w-px h-48 bg-gradient-to-b from-transparent via-[#d9c1bb] to-transparent" />
+        <div className="hidden lg:block absolute left-16 lg:left-32 top-1/2 w-px h-48 bg-gradient-to-b from-transparent via-[#d9c1bb] to-transparent" />
       </div>
 
       {/* Label + decorative line */}
@@ -137,17 +137,30 @@ export default function Hero() {
             animate={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
           >
-            {/* Main image frame */}
-            <div className="relative aspect-[4/5] lg:aspect-[3/4] rounded-lg overflow-hidden max-w-md mx-auto lg:ml-auto">
-              {/* Hero image - real photo */}
-              <img
-                src="/imgs/parede.jpg"
-                alt="Arte da Graci"
-                className="w-full h-full object-cover"
-              />
-              {/* Decorative corner frame */}
-              <div className="absolute top-4 left-4 w-8 h-8 border-t border-l border-[#a65d46]/60" aria-hidden="true" />
-              <div className="absolute bottom-4 right-4 w-8 h-8 border-b border-r border-[#a65d46]/60" aria-hidden="true" />
+            {/* Main image container */}
+            <div className="relative max-w-md mx-auto lg:ml-auto">
+              {/* Main image frame */}
+              <div className="relative aspect-[4/5] lg:aspect-[3/4] rounded-lg overflow-hidden">
+                {/* Hero image - real photo */}
+                <img
+                  src="/imgs/parede.jpg"
+                  alt="Arte da Graci"
+                  className="w-full h-full object-cover"
+                />
+                {/* Decorative corner frame */}
+                <div className="absolute top-4 left-4 w-8 h-8 border-t border-l border-[#a65d46]/60" aria-hidden="true" />
+                <div className="absolute bottom-4 right-4 w-8 h-8 border-b border-r border-[#a65d46]/60" aria-hidden="true" />
+              </div>
+
+              {/* Graci Avatar */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.7, delay: 1 }}
+                className="absolute -bottom-8 -right-8 lg:-bottom-12 lg:-right-12 w-32 h-32 lg:w-48 lg:h-48 rounded-full border-[6px] border-[#faf9f6] shadow-xl overflow-hidden z-10"
+              >
+                <img src="/imgs/avatar.png" alt="Graci" className="w-full h-full object-cover" />
+              </motion.div>
             </div>
 
             {/* Floating stat badges */}

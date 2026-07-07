@@ -25,6 +25,17 @@ const testimonials = [
     accentBg: '#e1e6b8',
     accentText: '#5c613d',
   },
+  {
+    id: 3,
+    name: 'Ana Velloso',
+    role: 'Cliente',
+    event: 'Transformação',
+    text: 'Eu que te agradeço pela parceria nessas transformações muito significativas, que vão refletindo as superações da vida!',
+    rating: 5,
+    initial: 'A',
+    accentBg: '#fcdcc9',
+    accentText: '#6a5445',
+  },
 ]
 
 export default function Depoimentos() {

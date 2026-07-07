@@ -13,6 +13,7 @@ const services = [
       'Uma experiência inesquecível para seus convidados e uma obra de arte única como lembrança do seu grande dia.',
     details: ['Tela personalizada', 'Performance ao vivo', 'Moldura inclusa'],
     accent: '#884530',
+    image: '/imgs/casamento001.jpeg',
   },
   {
     id: 'pintura-paredes',
@@ -24,6 +25,7 @@ const services = [
       'Murais afetuosos e personalizados que trazem vida e personalidade para ambientes residenciais e comerciais.',
     details: ['Mural exclusivo', 'Residencial ou comercial', 'Arte durável'],
     accent: '#5c613d',
+    image: '/imgs/parede004.jpeg',
   },
   {
     id: 'canecas',
@@ -35,6 +37,7 @@ const services = [
       'Peças exclusivas pintadas à mão para presentear com significado e afeto.',
     details: ['Pintura à mão', 'Tema personalizado', 'Embalagem especial'],
     accent: '#6a5445',
+    image: '/imgs/caneca001.jpeg',
   },
   {
     id: 'lettering',
@@ -46,6 +49,7 @@ const services = [
       'Comunicação elegante para painéis, lousas e itens de papelaria com traços únicos.',
     details: ['Painéis e lousas', 'Papelaria premium', 'Tipografia exclusiva'],
     accent: '#884530',
+    image: '/imgs/casamento003.jpeg',
   },
   {
     id: 'jaquetas',
@@ -57,6 +61,7 @@ const services = [
       'Arte vestível com design único criado especialmente para você expressar sua identidade.',
     details: ['Design exclusivo', 'Pintura permanente', 'Peça única'],
     accent: '#6a5445',
+    image: '/imgs/jaqueta001.jpeg',
   },
 ]
 
@@ -129,7 +134,7 @@ export default function Servicos() {
 }
 
 function ServiceCard({ service, index, isInView, large = false }) {
-  const { icon: Icon, tag, tagColor, title, description, details, accent } = service
+  const { icon: Icon, tag, tagColor, title, description, details, accent, image } = service
 
   return (
     <motion.article
@@ -137,57 +142,73 @@ function ServiceCard({ service, index, isInView, large = false }) {
       variants={cardVariants}
       initial="hidden"
       animate={isInView ? 'visible' : 'hidden'}
-      className={`group relative bg-[#f4f3f1] rounded-lg p-7 lg:p-8 cursor-pointer overflow-hidden
+      className={`group relative bg-[#f4f3f1] rounded-lg cursor-pointer overflow-hidden flex flex-col
         hover:bg-white hover:shadow-2xl hover:shadow-[#884530]/10 transition-all duration-500
         ${large ? 'min-h-[280px]' : 'min-h-[220px]'}`}
       whileHover={{ y: -4 }}
       transition={{ type: 'spring', stiffness: 200, damping: 20 }}
     >
-      {/* Background accent on hover */}
-      <div
-        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-        style={{ background: `radial-gradient(ellipse at 80% 10%, ${accent}08 0%, transparent 60%)` }}
-        aria-hidden="true"
-      />
-
-      {/* Tag */}
-      <span className={`inline-block text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full mb-4 ${tagColor}`}>
-        {tag}
-      </span>
-
-      {/* Icon + Title row */}
-      <div className="flex items-start justify-between mb-3">
-        <h3 className="font-serif text-xl lg:text-2xl font-medium text-[#1a1c1a] leading-snug pr-4">
-          {title}
-        </h3>
-        <div
-          className="flex-shrink-0 w-10 h-10 rounded flex items-center justify-center transition-all duration-300 group-hover:scale-110"
-          style={{ background: `${accent}15` }}
-        >
-          <Icon size={20} style={{ color: accent }} />
-        </div>
+      {/* Image Header */}
+      <div 
+        className={`relative w-full overflow-hidden transition-[height] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+          large ? 'h-48 group-hover:h-80' : 'h-40 group-hover:h-64'
+        }`}
+      >
+        <img
+          src={image}
+          alt={title}
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1a1c1a]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       </div>
 
-      {/* Description */}
-      <p className="font-sans text-sm text-[#54433e] leading-relaxed mb-5">
-        {description}
-      </p>
+      <div className="p-7 lg:p-8 flex-1 flex flex-col relative">
+        {/* Background accent on hover */}
+        <div
+          className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+          style={{ background: `radial-gradient(ellipse at 80% 10%, ${accent}08 0%, transparent 60%)` }}
+          aria-hidden="true"
+        />
 
-      {/* Details */}
-      <ul className="flex flex-wrap gap-2" aria-label={`Detalhes de ${title}`}>
-        {details.map((d) => (
-          <li
-            key={d}
-            className="font-sans text-xs text-[#86736d] bg-[#efeeeb] group-hover:bg-[#faf9f6] px-3 py-1 rounded-full transition-colors duration-300"
+        {/* Tag */}
+        <span className={`inline-block text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full mb-4 w-max ${tagColor}`}>
+          {tag}
+        </span>
+
+        {/* Icon + Title row */}
+        <div className="flex items-start justify-between mb-3">
+          <h3 className="font-serif text-xl lg:text-2xl font-medium text-[#1a1c1a] leading-snug pr-4">
+            {title}
+          </h3>
+          <div
+            className="flex-shrink-0 w-10 h-10 rounded flex items-center justify-center transition-all duration-300 group-hover:scale-110"
+            style={{ background: `${accent}15` }}
           >
-            {d}
-          </li>
-        ))}
-      </ul>
+            <Icon size={20} style={{ color: accent }} />
+          </div>
+        </div>
 
-      {/* Arrow on hover */}
-      <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300">
-        <ArrowUpRight size={20} style={{ color: accent }} />
+        {/* Description */}
+        <p className="font-sans text-sm text-[#54433e] leading-relaxed mb-5 flex-1">
+          {description}
+        </p>
+
+        {/* Details */}
+        <ul className="flex flex-wrap gap-2 mt-auto" aria-label={`Detalhes de ${title}`}>
+          {details.map((d) => (
+            <li
+              key={d}
+              className="font-sans text-xs text-[#86736d] bg-[#efeeeb] group-hover:bg-[#faf9f6] px-3 py-1 rounded-full transition-colors duration-300"
+            >
+              {d}
+            </li>
+          ))}
+        </ul>
+
+        {/* Arrow on hover */}
+        <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300 pointer-events-none">
+          <ArrowUpRight size={20} style={{ color: accent }} />
+        </div>
       </div>
     </motion.article>
   )
