@@ -16,7 +16,7 @@ const galleryItems = [
   },
   {
     id: 2,
-    title: 'Detalhe Casamento',
+    title: 'Pintura de Casamento',
     category: 'Casamento',
     span: '',
     bg: "url('/imgs/casamento002.jpeg') center/cover no-repeat",
@@ -24,7 +24,7 @@ const galleryItems = [
   },
   {
     id: 3,
-    title: 'Lettering Casamento',
+    title: 'Pintura de Casamento',
     category: 'Casamento',
     span: '',
     bg: "url('/imgs/casamento003.jpeg') center/cover no-repeat",
@@ -32,7 +32,7 @@ const galleryItems = [
   },
   {
     id: 4,
-    title: 'Mural Casamento',
+    title: 'Pintura ao vivo',
     category: 'Casamento',
     span: '',
     bg: "url('/imgs/casamento004.jpeg') center/cover no-repeat",
@@ -53,7 +53,7 @@ const galleryItems = [
     title: 'Mural Residencial',
     category: 'Mural',
     span: 'md:col-span-2 md:row-span-2',
-    bg: "url('/imgs/parede.jpg') center/cover no-repeat",
+    bg: "url('/imgs/muralResidencial.jpeg') center/cover no-repeat",
     size: 'large',
   },
   {
@@ -61,7 +61,7 @@ const galleryItems = [
     title: 'Mural Comercial',
     category: 'Mural',
     span: '',
-    bg: "url('/imgs/parede002.jpg') center/cover no-repeat",
+    bg: "url('/imgs/paredeComercial.jpeg') center/cover no-repeat",
     size: 'small',
   },
   {
@@ -77,7 +77,7 @@ const galleryItems = [
     title: 'Mural Quarto',
     category: 'Mural',
     span: 'md:col-span-2',
-    bg: "url('/imgs/parede004.jpeg') center/cover no-repeat",
+    bg: "url('/imgs/quartoInfantil.jpeg') center/cover no-repeat",
     size: 'medium',
   },
 
@@ -155,11 +155,10 @@ export default function Portfolio() {
                 key={cat}
                 id={`filter-${cat.toLowerCase().replace(/ /g, '-')}`}
                 onClick={() => setActiveCategory(cat)}
-                className={`font-sans text-xs font-semibold uppercase tracking-wider px-4 py-2 rounded-full transition-all duration-300 ${
-                  activeCategory === cat
-                    ? 'bg-[#884530] text-white shadow-md shadow-[#884530]/20'
-                    : 'bg-white/70 text-[#54433e] hover:bg-white hover:text-[#884530]'
-                }`}
+                className={`font-sans text-xs font-semibold uppercase tracking-wider px-4 py-2 rounded-full transition-all duration-300 ${activeCategory === cat
+                  ? 'bg-[#884530] text-white shadow-md shadow-[#884530]/20'
+                  : 'bg-white/70 text-[#54433e] hover:bg-white hover:text-[#884530]'
+                  }`}
                 aria-pressed={activeCategory === cat}
               >
                 {cat}
