@@ -13,7 +13,7 @@ const services = [
       'Uma experiência inesquecível para seus convidados e uma obra de arte única como lembrança do seu grande dia.',
     details: ['Tela personalizada', 'Performance ao vivo', 'Moldura inclusa'],
     accent: '#884530',
-    image: '/imgs/casamento001.jpeg',
+    image: '/imgs/WhatsApp Image 2026-05-06 at 3.07.13 PM.jpeg',
   },
   {
     id: 'pintura-paredes',
@@ -25,7 +25,7 @@ const services = [
       'Murais afetuosos e personalizados que trazem vida e personalidade para ambientes residenciais e comerciais.',
     details: ['Mural exclusivo', 'Residencial ou comercial', 'Arte durável'],
     accent: '#5c613d',
-    image: '/imgs/parede004.jpeg',
+    image: '/imgs/chao.jpg',
   },
   {
     id: 'canecas',
@@ -37,7 +37,7 @@ const services = [
       'Peças exclusivas pintadas à mão para presentear com significado e afeto.',
     details: ['Pintura à mão', 'Tema personalizado', 'Embalagem especial'],
     accent: '#6a5445',
-    image: '/imgs/caneca001.jpeg',
+    image: '/imgs/rede.jpg',
   },
   {
     id: 'lettering',
@@ -49,7 +49,7 @@ const services = [
       'Comunicação elegante para painéis, lousas e itens de papelaria com traços únicos.',
     details: ['Painéis e lousas', 'Papelaria premium', 'Tipografia exclusiva'],
     accent: '#884530',
-    image: '/imgs/casamento003.jpeg',
+    image: '/imgs/WhatsApp Image 2026-05-06 at 3.09.22 PM.jpeg',
   },
   {
     id: 'jaquetas',
@@ -61,7 +61,7 @@ const services = [
       'Arte vestível com design único criado especialmente para você expressar sua identidade.',
     details: ['Design exclusivo', 'Pintura permanente', 'Peça única'],
     accent: '#6a5445',
-    image: '/imgs/jaqueta001.jpeg',
+    image: '/imgs/perfil001.jpeg',
   },
 ]
 
