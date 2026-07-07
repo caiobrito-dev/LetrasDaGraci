@@ -159,7 +159,7 @@ export default function Hero() {
                 transition={{ duration: 0.7, delay: 1 }}
                 className="absolute -bottom-8 -right-8 lg:-bottom-12 lg:-right-12 w-32 h-32 lg:w-48 lg:h-48 rounded-full border-[6px] border-[#faf9f6] shadow-xl overflow-hidden z-10"
               >
-                <img src="/imgs/perfil001.jpeg" alt="Graci" className="w-full h-full object-cover" />
+                <img src="/imgs/avatar.png" alt="Graci" className="w-full h-full object-cover" />
               </motion.div>
             </div>
 

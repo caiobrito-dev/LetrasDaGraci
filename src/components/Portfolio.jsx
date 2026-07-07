@@ -11,7 +11,7 @@ const galleryItems = [
     title: 'Pintura ao Vivo',
     category: 'Casamento',
     span: 'md:col-span-2 md:row-span-2',
-    bg: "url('/imgs/WhatsApp Image 2026-05-06 at 3.07.13 PM.jpeg') center/cover no-repeat",
+    bg: "url('/imgs/casamento001.jpeg') center/cover no-repeat",
     size: 'large',
   },
   {
@@ -19,7 +19,7 @@ const galleryItems = [
     title: 'Detalhe Casamento',
     category: 'Casamento',
     span: '',
-    bg: "url('/imgs/WhatsApp Image 2026-05-06 at 3.09.21 PM.jpeg') center/cover no-repeat",
+    bg: "url('/imgs/casamento002.jpeg') center/cover no-repeat",
     size: 'small',
   },
   {
@@ -27,7 +27,7 @@ const galleryItems = [
     title: 'Lettering Casamento',
     category: 'Casamento',
     span: '',
-    bg: "url('/imgs/WhatsApp Image 2026-05-06 at 3.09.22 PM.jpeg') center/cover no-repeat",
+    bg: "url('/imgs/casamento003.jpeg') center/cover no-repeat",
     size: 'small',
   },
   {
@@ -35,7 +35,7 @@ const galleryItems = [
     title: 'Mural Casamento',
     category: 'Casamento',
     span: '',
-    bg: "url('/imgs/WhatsApp Image 2026-05-06 at 3.10.20 PM.jpeg') center/cover no-repeat",
+    bg: "url('/imgs/casamento004.jpeg') center/cover no-repeat",
     size: 'small',
   },
   {
@@ -43,7 +43,7 @@ const galleryItems = [
     title: 'Quadro Casamento',
     category: 'Casamento',
     span: 'md:col-span-2',
-    bg: "url('/imgs/quadro.jpg') center/cover no-repeat",
+    bg: "url('/imgs/casamento005.jpeg') center/cover no-repeat",
     size: 'medium',
   },
 
@@ -77,7 +77,7 @@ const galleryItems = [
     title: 'Mural Quarto',
     category: 'Mural',
     span: 'md:col-span-2',
-    bg: "url('/imgs/chao.jpg') center/cover no-repeat",
+    bg: "url('/imgs/parede004.jpeg') center/cover no-repeat",
     size: 'medium',
   },
 
@@ -87,7 +87,7 @@ const galleryItems = [
     title: 'Canecas Padrinhos',
     category: 'Presentes',
     span: '',
-    bg: "url('/imgs/rede.jpg') center/cover no-repeat",
+    bg: "url('/imgs/caneca001.jpeg') center/cover no-repeat",
     size: 'small',
   },
   {
@@ -95,7 +95,7 @@ const galleryItems = [
     title: 'Jaqueta Customizada',
     category: 'Arte Vestível',
     span: '',
-    bg: "url('/imgs/perfil001.jpeg') center/cover no-repeat",
+    bg: "url('/imgs/jaqueta001.jpeg') center/cover no-repeat",
     size: 'small',
   },
 ]
