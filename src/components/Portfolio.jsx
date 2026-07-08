@@ -10,9 +10,9 @@ const galleryItems = [
     id: 1,
     title: 'Pintura ao Vivo',
     category: 'Casamento',
-    span: 'md:col-span-2 md:row-span-2',
+    span: '',
     bg: "url('/imgs/casamento001.jpeg') center/cover no-repeat",
-    size: 'large',
+    size: 'small',
   },
   {
     id: 2,
@@ -26,17 +26,9 @@ const galleryItems = [
     id: 3,
     title: 'Pintura de Casamento',
     category: 'Casamento',
-    span: '',
+    span: 'md:col-span-2 md:row-span-2',
     bg: "url('/imgs/casamento003.jpeg') center/cover no-repeat",
-    size: 'small',
-  },
-  {
-    id: 4,
-    title: 'Pintura ao vivo',
-    category: 'Casamento',
-    span: '',
-    bg: "url('/imgs/casamento004.jpeg') center/cover no-repeat",
-    size: 'small',
+    size: 'large',
   },
   {
     id: 5,
@@ -45,6 +37,14 @@ const galleryItems = [
     span: 'md:col-span-2',
     bg: "url('/imgs/casamento005.jpeg') center/cover no-repeat",
     size: 'medium',
+  },
+  {
+    id: 4,
+    title: 'Pintura ao vivo',
+    category: 'Casamento',
+    span: '',
+    bg: "url('/imgs/casamento004.jpeg') center/cover no-repeat",
+    size: 'small',
   },
 
   // Murais
@@ -84,7 +84,7 @@ const galleryItems = [
   // Outros
   {
     id: 10,
-    title: 'Canecas Padrinhos',
+    title: 'Canecas Personalizada',
     category: 'Presentes',
     span: '',
     bg: "url('/imgs/caneca001.jpeg') center/cover no-repeat",
@@ -110,7 +110,7 @@ export default function Portfolio() {
 
   const filtered =
     activeCategory === 'Todos'
-      ? galleryItems
+      ? galleryItems.filter((g) => g.category !== 'Casamento' || g.id === 3)
       : galleryItems.filter((g) => g.category === activeCategory)
 
   return (

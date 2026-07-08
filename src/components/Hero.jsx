@@ -138,9 +138,9 @@ export default function Hero() {
             transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
           >
             {/* Main image container */}
-            <div className="relative max-w-md mx-auto lg:ml-auto">
+            <div className="relative max-w-xl mx-auto lg:ml-auto mt-8 lg:mt-0">
               {/* Main image frame */}
-              <div className="relative aspect-[4/5] lg:aspect-[3/4] rounded-lg overflow-hidden">
+              <div className="relative aspect-[4/3] lg:aspect-video rounded-lg overflow-hidden">
                 {/* Hero image - real photo */}
                 <img
                   src="/imgs/parede.jpg"
